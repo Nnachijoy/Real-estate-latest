@@ -1,0 +1,22 @@
+
+
+
+.custom-table tbody tr,
+.custom-table tbody td,
+.custom-table tbody th {
+  border: none;
+}
+
+.custom-table thead th {
+  border-bottom: 2px solid #dee2e6; /* You can customize the border color and thickness */
+}
+
+
+.custom-table th, .custom-table td {
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}

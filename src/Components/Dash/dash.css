@@ -1,0 +1,86 @@
+
+.profile-container {
+  margin-left: 91%;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+
+  .bell{
+    max-width: '30px';
+    max-height:30px;
+  }
+
+  .prof{
+    max-width: '65px';
+    max-height:65px;
+  }
+
+
+
+  .search-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 35px;
+  }
+  
+  .search-input {
+    width: calc(100%); /* Adjust to ensure it aligns with the profile image */
+  }
+  
+
+  /* Add this to your CSS file */
+@media (max-width: 768px) {
+  .search-form-mobile {
+    width: 90% !important;
+  }
+
+  .profile-container {
+    margin-left: 70%;
+    max-width: 10px;
+    
+  }
+
+ 
+  
+  .ml-2 {
+    margin-left: 10px;
+  }
+
+  .search-form-mobile .search-input {
+    width: calc(100% - 40px); /* Adjust this value as needed */
+  }
+}
+
+.search{
+  width: 60%
+}
+  
+.profile{
+  margin-left: -100%;
+}
+
+
+.search-input {
+  margin-right: 10px;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+.custom-table tbody tr,
+.custom-table tbody td,
+.custom-table tbody th {
+  border: none;
+}
+
+.custom-table thead th {
+  border-bottom: 2px solid #dee2e6; /* You can customize the border color and thickness */
+}
+
+
+

@@ -1,0 +1,90 @@
+
+.button-container {
+  display: flex;
+  gap: 10px; 
+}
+
+.property-name{
+  color: #5D656E;
+  font-size: 11.38px;
+  font-weight: 400;
+  line-height: 16.39;
+}
+
+.image-container-setting {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.rounded-circle {
+  width: 130px;
+  height: 130px; 
+  border-radius: 50%;
+  object-fit: cover; 
+  border: 0.4px solid #FF7B29;
+}
+
+.pencil {
+  position: absolute;
+  width: 40px;  
+  height: 40px; 
+  bottom: 0;
+  right: 0;
+}
+
+
+.position-relatives {
+  position: relative !important;
+}
+
+.custom-inputs {
+  padding-top: 40px !important; 
+  padding-left: 10px !important;
+  border: none !important;
+
+}
+
+.custom-inputs::placeholder {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 18.09px !important;
+  color: #BFBFBF !important;
+}
+
+.custom-placeholder-labels {
+  position: absolute !important;
+  top: 0.5rem !important;
+  left: 10px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 26px !important;
+  color: #576779 !important;
+  transition: all 0.2s !important;
+  pointer-events: none !important;
+}
+
+.custom-inputs:focus + .custom-placeholder-labels,
+.custom-inputs:not(:placeholder-shown) + .custom-placeholder-labels {
+  top: -0.75rem !important;
+  left: 10px !important;
+  font-size: 0.75rem !important;
+  color: #495057 !important;
+  background-color: white !important;
+  padding: 0 0.25rem !important;
+}
+
+
+.na {
+  color: #16314E;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.87px;
+}
+
+.edit {
+  color: #FF7B29;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}

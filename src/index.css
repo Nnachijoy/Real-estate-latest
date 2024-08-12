@@ -1,0 +1,31 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: medium;
+    src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Kufam;
+}
+
+p, div {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    text-align: left;
+}

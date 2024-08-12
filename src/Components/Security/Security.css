@@ -1,0 +1,22 @@
+.custom-form-group {
+  padding-top: 1rem; /* Adjust padding as needed */
+  padding-bottom: 1rem; /* Adjust padding as needed */
+  min-height: 150px; /* Adjust height as needed */
+}
+
+.custom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 576px) {
+  .custom-content {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+
