@@ -81,26 +81,6 @@ export const Dashb = () => {
   </Container>
 </div>
 
-      {/* <div className="container d-none d-md-block">
-        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
-          <div className="d-flex align-items-center position-absolute  profile-container">
-            <Image
-              src={bell}
-              className="mr-2 mx-2 mb-4 bell"
-            />
-            <Image
-              src={profile}
-              className="prof"
-              style={{
-                maxWidth: '65px',
-                maxHeight: '65px'
-              }}
-              roundedCircle
-            />
-          </div>
-        </Container>
-      </div> */}
-
 <div className="container d-none d-md-block">
       <Head 
         bellIcon={bell} 

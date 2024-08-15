@@ -11,7 +11,7 @@ import Head from '../Head';
 
 const Security = () => {
   return (
-    <div className='container'>
+    <div className="container" style={{ marginTop: "-1px", marginBottom: "180px", position: "relative" }}>
       {/* Mobile Navbar with Profile Image and Bell Icon */}
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
         <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
@@ -162,7 +162,7 @@ const Security = () => {
             />
             <div className="position-absolute d-flex align-items-center custom-google" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
               <div className="me-2 na"></div>
-              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>link</h1>
+              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>Deactivate account</h1>
             </div>
             <Form.Label className="custom-placeholder-labels">Google Account</Form.Label>
           </Form.Group>
@@ -183,7 +183,7 @@ const Security = () => {
             />
             <div className="position-absolute d-flex align-items-center custom-alerts" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
               <div className="me-2 na"></div>
-              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>set</h1>
+              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>Go to privacy portal</h1>
             </div>
             <Form.Label className="custom-placeholder-labels">Account Alerts</Form.Label>
           </Form.Group>
