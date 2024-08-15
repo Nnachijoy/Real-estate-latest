@@ -169,21 +169,24 @@ const Listing = () => {
 
   return (
     <div style={{ marginTop: "-1px", marginBottom: "180px" }}>
+      {/* Mobile Navbar with Profile Image and Bell Icon */}
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
-        <Animation animationClass="animate__fadeInDownBig" delay={2000}>
-          <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
-            <h3 className="flex-grow-1 mt-1" style={{ marginLeft: "60px", color: "#FF7B29", fontFamily: "Syne", fontWeight: "700", fontSize: "22px" }}>RealHomes</h3>
-          
-          </Container>
-        </Animation>
+        <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+          {/* Bell Icon */}
+          <Image src={bell} style={{ width: "20px", height: "20px", marginRight: "10px" }} />
+          {/* Profile Image */}
+          <Image src={profile} roundedCircle style={{ width: "40px", height: "40px", marginRight: "35px" }} />
+        </Container>
       </div>
 
+      {/* Desktop Navbar with Head Component */}
       <div className="container d-none d-md-block">
-      <Head 
-        bellIcon={bell} 
-        profileImage={profile} 
-      />
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <Head bellIcon={bell} profileImage={profile} />
+        </Container>
       </div>
+
 
       <Container>
         <Row>
@@ -323,14 +326,15 @@ const Listing = () => {
                   <div style={{ position: 'relative' }}>
                     <Card.Img variant="top" src={listing.image} style={{ position: 'relative' }} />
                     <Button 
-                      className="action-button rounded-4 fs-6" 
+                      className="action-button rounded-4" 
                       style={{ 
                         position: 'absolute', 
                         top: '10px', 
                         left: '10px', 
                         backgroundColor: currentView === 'Approved' ? '#FF8844' : '#404040', 
                         color: 'white',
-                        border: 'none'
+                        border: 'none',
+                        fontSize:"14px"
                       }}>
                       {currentView === 'Approved' ? 'SELL' : 'UNAPPROVED'}
                     </Button>

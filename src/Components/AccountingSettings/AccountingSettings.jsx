@@ -24,7 +24,7 @@ const MyListing = () => {
   return (
     <div style={{marginTop:"-1px", marginBottom:"180px"}}> 
     <Animation animationClass="animate__slideInRight" delay={200}>
-     <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+     {/* <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
   <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
     <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
    
@@ -40,7 +40,26 @@ const MyListing = () => {
       />
       </div>
         </Container>
+      </div> */}
+
+       {/* Mobile Navbar with Profile Image and Bell Icon */}
+      <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+        <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+          {/* Bell Icon */}
+          <Image src={bell} style={{ width: "20px", height: "20px", marginRight: "10px" }} />
+          {/* Profile Image */}
+          <Image src={profile} roundedCircle style={{ width: "40px", height: "40px", marginRight: "35px" }} />
+        </Container>
       </div>
+
+      {/* Desktop Navbar with Head Component */}
+      <div className="container d-none d-md-block">
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <Head bellIcon={bell} profileImage={profile} />
+        </Container>
+      </div>
+
 
       <Container>
         <Row>
@@ -150,8 +169,46 @@ const MyListing = () => {
     <Form.Label className="custom-placeholder-labels">Phone no</Form.Label>
   </Form.Group>
 
+  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
+    <Form.Control
+      type="name"
+      placeholder="Add your state"
+      className="custom-inputs"   style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
+    />
+       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
+      <div className="me-2 na">N/A</div>
+      <h1 className='edit mt-2'>Edit</h1>
+    </div>
+    <Form.Label className="custom-placeholder-labels">State</Form.Label>
+  </Form.Group>
+
+  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
+    <Form.Control
+      type="name"
+      placeholder="Add your city"
+      className="custom-inputs"   style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
+    />
+       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
+      <div className="me-2 na">N/A</div>
+      <h1 className='edit mt-2'>Edit</h1>
+    </div>
+    <Form.Label className="custom-placeholder-labels">City</Form.Label>
+  </Form.Group>
+  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
+    <Form.Control
+      type="name"
+      placeholder="kind of services you offer"
+      className="custom-inputs"   style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
+    />
+       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
+      <div className="me-2 na">N/A</div>
+      <h1 className='edit mt-2'>Edit</h1>
+    </div>
+    <Form.Label className="custom-placeholder-labels">Your Services</Form.Label>
+  </Form.Group>
+
 <Row>
-  <Col>
+  {/* <Col>
   <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
     <Form.Control
       type="number"
@@ -164,10 +221,10 @@ const MyListing = () => {
     </div>
     <Form.Label className="custom-placeholder-labels">State</Form.Label>
   </Form.Group>
-  </Col>
+  </Col> */}
 
 
-  <Col>
+  {/* <Col>
   <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
     <Form.Control
       type="number"
@@ -180,9 +237,9 @@ const MyListing = () => {
     </div>
     <Form.Label className="custom-placeholder-labels">City</Form.Label>
   </Form.Group>
-  </Col>
+  </Col> */}
 </Row>
-
+{/* 
   <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
     <Form.Control
       type="number"
@@ -194,7 +251,7 @@ const MyListing = () => {
       <h1 className='edit mt-2'>Edit</h1>
     </div>
     <Form.Label className="custom-placeholder-labels">Your services</Form.Label>
-  </Form.Group>
+  </Form.Group> */}
 
 </Form>
 

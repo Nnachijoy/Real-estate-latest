@@ -12,6 +12,7 @@ import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import Animation from '../Animation';
+import Head from '../Head'; 
 
 const profiles = [
   {
@@ -23,7 +24,7 @@ const profiles = [
     reviews: 0,
     housesSold: 150,
     experience: null,
-    buttons: ['Rentals']
+    buttons: ['Rentals', 'Selling a house', "Buying a house"]
   },
   {
     id: 2,
@@ -33,7 +34,7 @@ const profiles = [
     ratings: 4.5,
     reviews: 12,
     housesSold: 150,
-    experience: '8 Years experience',
+    experience: 'Rentals',
     buttons: ['Selling a house', 'Buying a House']
   },
   {
@@ -51,8 +52,25 @@ const profiles = [
 
 const SavedProfile = () => {
   return (
-    <div className="container">
-      {/* Your existing header code here */}
+    <div className="container" style={{ marginTop: "-1px", marginBottom: "180px" }}>
+      {/* Mobile Navbar with Profile Image and Bell Icon */}
+      <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
+        <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
+          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+          {/* Bell Icon */}
+          <Image src={bell} style={{ width: "20px", height: "20px", marginRight: "10px" }} />
+          {/* Profile Image */}
+          <Image src={profile} roundedCircle style={{ width: "40px", height: "40px", marginRight: "35px" }} />
+        </Container>
+      </div>
+
+      {/* Desktop Navbar with Head Component */}
+      <div className="container d-none d-md-block">
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <Head bellIcon={bell} profileImage={profile} />
+        </Container>
+      </div>
+
 
       <Container>
         <Animation animationClass="animate__slideInRight" delay={200}>
@@ -75,7 +93,7 @@ const SavedProfile = () => {
       <div className='mt-3'>
         <Animation animationClass="animate__slideInLeft" delay={200}>
           {profiles.map(profile => (
-            <Card key={profile.id} body border='light' bg='' className='mt-3 p-2'>
+            <Card key={profile.id} body border='light' bg='' className='mt-3'>
               <div className="profile-containers">
                 <div>
                   <img src={profile.image} alt={`Profile ${profile.id}`} className="saved-profile-image" />

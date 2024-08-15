@@ -1,10 +1,7 @@
 
 
-
-
 import React from 'react';
-import { ButtonGroup, ToggleButton, Container, Row, Col, Button, FormControl, Image } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
+import { Container, Row, Col, FormControl, Image, Form } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
@@ -15,33 +12,23 @@ import Head from '../Head';
 const Security = () => {
   return (
     <div className='container'>
-      <motion.div
-        className="d-block d-md-none bg-white"
-        style={{ height: "62px", width: "400px", marginLeft: "-30px" }}
-        initial={{ opacity: 0, y: -70 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      {/* Mobile Navbar with Profile Image and Bell Icon */}
+      <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
         <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
-          <h3 className="flex-grow-1 mt-1" style={{ marginLeft: "60px", color: "#FF7B29", fontFamily: "Syne", fontWeight: "700", fontSize: "22px" }}>RealHomes</h3>
+          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+          {/* Bell Icon */}
+          <Image src={bell} style={{ width: "20px", height: "20px", marginRight: "10px" }} />
+          {/* Profile Image */}
+          <Image src={profile} roundedCircle style={{ width: "40px", height: "40px", marginRight: "35px" }} />
         </Container>
-      </motion.div>
-
-      <motion.div
-        className="container d-none d-md-block"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Container className="p-3" style={{ position: 'relative', marginLeft: "-30px" }}>
-        <div className="container d-none d-md-block">
-      <Head 
-        bellIcon={bell} 
-        profileImage={profile} 
-      />
       </div>
+
+      {/* Desktop Navbar with Head Component */}
+      <div className="container d-none d-md-block">
+        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
+          <Head bellIcon={bell} profileImage={profile} />
         </Container>
-      </motion.div>
+      </div>
 
       <Container>
         <Row>
@@ -64,7 +51,9 @@ const Security = () => {
         </Row>
       </Container>
 
+      {/* Form Elements */}
       <Form className='mt-5'>
+        {/* Email Verification for Mobile */}
         <motion.div
           className="d-block d-sm-none"
           initial={{ x: -100, opacity: 0 }}
@@ -91,6 +80,7 @@ const Security = () => {
           </Form.Group>
         </motion.div>
 
+        {/* Email Verification for Desktop */}
         <motion.div
           className="d-none d-sm-block"
           initial={{ x: 100, opacity: 0 }}
@@ -115,6 +105,7 @@ const Security = () => {
           </Form.Group>
         </motion.div>
 
+        {/* Password Setup */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -135,6 +126,7 @@ const Security = () => {
           </Form.Group>
         </motion.div>
 
+        {/* Google Account Link */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -155,6 +147,7 @@ const Security = () => {
           </Form.Group>
         </motion.div>
 
+        {/* Account Alerts */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -175,6 +168,7 @@ const Security = () => {
           </Form.Group>
         </motion.div>
 
+        {/* Account Alerts */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -183,13 +177,13 @@ const Security = () => {
           <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput5">
             <Form.Control
               type="text"
-              placeholder="Monitor activities in your account and stay informed"
+              placeholder="set account alerts"
               className="custom-inputs"
               style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }} 
             />
-            <div className="position-absolute d-flex align-items-center custom-google" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
+            <div className="position-absolute d-flex align-items-center custom-alerts" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
               <div className="me-2 na"></div>
-              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>view</h1>
+              <h1 className='edit mt-2' style={{ fontSize: '1rem' }}>set</h1>
             </div>
             <Form.Label className="custom-placeholder-labels">Account Alerts</Form.Label>
           </Form.Group>
