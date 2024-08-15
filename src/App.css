@@ -1,20 +1,20 @@
+/* 
 
 
 
 
-/* App container styles */
 .app-container {
   height: 100vh;
   overflow: hidden;
 }
 
-/* Content area styles */
+
 .content-area {
   overflow-y: auto;
   height: 100vh;
 }
 
-/* Toggle sidebar button styles */
+
 .toggle-sidebar-button {
   display: none;
   position: fixed;
@@ -55,18 +55,18 @@
   }
 }
 
-/* Sidebar column styles */
+
 .sidebar-column {
   height: 100vh;
   overflow-y: auto;
 }
 
-/* Hide body and html overflow */
+
 body, html {
   overflow: hidden;
 }
 
-/* Search form styles */
+
 .search-form {
   width: 100%;
   display: flex;
@@ -115,12 +115,12 @@ body, html {
 }
 
 
-/* App.css */
+
 
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 .app-container {
@@ -138,7 +138,7 @@ html, body {
   margin: 0;
 }
 
-/* Ensuring no overflow */
+
 .sidebar-visible {
   overflow-x: hidden;
 }
@@ -150,8 +150,7 @@ html, body {
 .d-md-block {
   overflow-x: hidden;
 }
-/* 
-Remove gap between columns on mobile  */
+
  @media (max-width: 768px) {
   .row {
     margin: 0;
@@ -160,4 +159,147 @@ Remove gap between columns on mobile  */
   .col {
     padding: 0;
   }
+}  */
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
+
+body, html {
+  overflow: hidden;
+}
+
+.app-container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; /* Prevent vertical overflow */
+}
+
+.content-area {
+  overflow-y: auto;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+.sidebar-column {
+  height: 100vh;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.toggle-sidebar-button {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: darkorange;
+  color: rgb(138, 6, 6);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .toggle-sidebar-button {
+    display: block;
+  }
+
+  .sidebar-column {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    z-index: 999;
+    background-color: white;
+    transition: transform 0.9s ease-in-out;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+  }
+
+  .sidebar-visible {
+    transform: translateX(0);
+  }
+
+  .sidebar-hidden {
+    transform: translateX(-100%);
+  }
+
+  .content-area {
+    padding-top: 0;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 35px;
+}
+
+.search-input {
+  width: calc(100%);
+}
+
+@media (max-width: 768px) {
+  .search-form-mobile {
+    width: 90% !important;
+  }
+
+  .search-form-mobile .search-input {
+    width: calc(100% - 40px);
+  }
+}
+
+.search {
+  width: 60%;
+}
+
+.profile {
+  margin-left: -100%;
+}
+
+.search-input {
+  margin-right: 10px;
+}
+
+.ml-2 {
+  margin-left: 10px;
+}
+
+.custom-table tbody tr,
+.custom-table tbody td,
+.custom-table tbody th {
+  border: none;
+}
+
+.custom-table thead th {
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Ensure no horizontal overflow in all scenarios */
+.sidebar-visible,
+.sidebar-hidden,
+.d-md-block {
+  overflow-x: hidden;
+}
+
