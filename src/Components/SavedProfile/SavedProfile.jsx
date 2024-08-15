@@ -51,7 +51,7 @@ const profiles = [
 
 const SavedProfile = () => {
   return (
-    <div>
+    <div className="container">
       {/* Your existing header code here */}
 
       <Container>

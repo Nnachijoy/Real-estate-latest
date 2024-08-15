@@ -14,7 +14,7 @@ import SalesChart from './SalesChart';
 import "./dash.css";
 import Animation from '../Animation';
 import InspectionTable from './InspectionTable';
-
+import Head from '../Head'; 
 
 
 
@@ -81,7 +81,7 @@ export const Dashb = () => {
   </Container>
 </div>
 
-      <div className="container d-none d-md-block">
+      {/* <div className="container d-none d-md-block">
         <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
           <div className="d-flex align-items-center position-absolute  profile-container">
             <Image
@@ -99,6 +99,13 @@ export const Dashb = () => {
             />
           </div>
         </Container>
+      </div> */}
+
+<div className="container d-none d-md-block">
+      <Head 
+        bellIcon={bell} 
+        profileImage={profile} 
+      />
       </div>
 
       <Animation animationClass="animate__slideInLeft" delay={200}>

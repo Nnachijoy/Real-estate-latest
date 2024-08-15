@@ -113,3 +113,51 @@ body, html {
 .custom-table thead th {
   border-bottom: 2px solid #dee2e6;
 }
+
+
+/* App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.app-container {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.sidebar-column {
+  padding: 0;
+}
+
+.content-area {
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensuring no overflow */
+.sidebar-visible {
+  overflow-x: hidden;
+}
+
+.sidebar-hidden {
+  overflow-x: hidden;
+}
+
+.d-md-block {
+  overflow-x: hidden;
+}
+/* 
+Remove gap between columns on mobile  */
+ @media (max-width: 768px) {
+  .row {
+    margin: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+}
