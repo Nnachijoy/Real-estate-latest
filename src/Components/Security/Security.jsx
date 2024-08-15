@@ -14,7 +14,7 @@ import Head from '../Head';
 
 const Security = () => {
   return (
-    <div>
+    <div className='container'>
       <motion.div
         className="d-block d-md-none bg-white"
         style={{ height: "62px", width: "400px", marginLeft: "-30px" }}
