@@ -94,10 +94,89 @@
 // export default Sidebar;
 
 
+
+
+// import React from 'react';
+// import { ListGroup, Button } from 'react-bootstrap';
+// import { FaTimes } from 'react-icons/fa';
+// import { Link } from 'react-router-dom';
+// import './Sidebar.css';
+// import set from "../../assets/set.png";
+// import shield from "../../assets/shield.png";
+// import pf from "../../assets/pf.png";
+// import list from "../../assets/list.png";
+// import graph from "../../assets/graph.png";
+// import fav from "../../assets/fav.png";
+// import log from "../../assets/log.png";
+// import { LuLayoutDashboard } from "react-icons/lu";
+
+// const Sidebar = ({ setSidebarVisible, handleItemClick }) => {
+//   return (
+//     <div className="sidebar bg-white">
+//       <ListGroup className="list-group-flush mt-4 ms-4">
+//         <div className="mt-5 d-flex justify-content-between align-items-center">
+//           <h3 style={{ color: "#FF8844" }}>RealHomes</h3>
+//           <Button 
+//             className="close-sidebar-button d-md-none border-0" 
+//             style={{ background: "none" }} 
+//             onClick={() => setSidebarVisible(false)}
+//           >
+//             <FaTimes style={{ color: "#888888" }} />
+//           </Button>
+//         </div>
+//         <p className="mt-4" style={{ color: "#FF8844" }}>Personal Account</p>
+//         <Link to="/dashboard" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-5 d-flex align-items-center">
+//             <LuLayoutDashboard className="icon mx-2" style={{ fontSize: "25px" }} /> Dashboard
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/activities" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={graph} className="mx-2" alt="Activity" /> Activity
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/my-listing" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={list} className="mx-2" alt="My Listing" /> My Listing
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/favorites" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={fav} className="mx-2" alt="Favourites" /> Favourites
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/saved-profile" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={pf} className="mx-2" alt="Saved Profile" /> Saved Profile
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/account-settings" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={shield} className="mx-2" alt="Account Settings" /> Account Settings
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/security" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={set} className="mx-2" alt="Security" /> Security
+//           </ListGroup.Item>
+//         </Link>
+//         <Link to="/logout" className="text-decoration-none" onClick={handleItemClick}>
+//           <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+//             <img src={log} className="mx-2" alt="Logout" /> Logout
+//           </ListGroup.Item>
+//         </Link>
+//       </ListGroup>
+//     </div>
+//   );
+// };
+
+// export default Sidebar;
+
+
 import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 import set from "../../assets/set.png";
 import shield from "../../assets/shield.png";
@@ -109,6 +188,8 @@ import log from "../../assets/log.png";
 import { LuLayoutDashboard } from "react-icons/lu";
 
 const Sidebar = ({ setSidebarVisible, handleItemClick }) => {
+  const location = useLocation(); // Get the current path
+
   return (
     <div className="sidebar bg-white">
       <ListGroup className="list-group-flush mt-4 ms-4">
@@ -123,43 +204,51 @@ const Sidebar = ({ setSidebarVisible, handleItemClick }) => {
           </Button>
         </div>
         <p className="mt-4" style={{ color: "#FF8844" }}>Personal Account</p>
+        
         <Link to="/dashboard" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-5 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-5 d-flex align-items-center ${location.pathname === '/dashboard' ? 'active' : ''}`}>
             <LuLayoutDashboard className="icon mx-2" style={{ fontSize: "25px" }} /> Dashboard
           </ListGroup.Item>
         </Link>
+
         <Link to="/activities" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/activities' ? 'active' : ''}`}>
             <img src={graph} className="mx-2" alt="Activity" /> Activity
           </ListGroup.Item>
         </Link>
+
         <Link to="/my-listing" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/my-listing' ? 'active' : ''}`}>
             <img src={list} className="mx-2" alt="My Listing" /> My Listing
           </ListGroup.Item>
         </Link>
+
         <Link to="/favorites" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/favorites' ? 'active' : ''}`}>
             <img src={fav} className="mx-2" alt="Favourites" /> Favourites
           </ListGroup.Item>
         </Link>
+
         <Link to="/saved-profile" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/saved-profile' ? 'active' : ''}`}>
             <img src={pf} className="mx-2" alt="Saved Profile" /> Saved Profile
           </ListGroup.Item>
         </Link>
+
         <Link to="/account-settings" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/account-settings' ? 'active' : ''}`}>
             <img src={shield} className="mx-2" alt="Account Settings" /> Account Settings
           </ListGroup.Item>
         </Link>
+
         <Link to="/security" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/security' ? 'active' : ''}`}>
             <img src={set} className="mx-2" alt="Security" /> Security
           </ListGroup.Item>
         </Link>
+
         <Link to="/logout" className="text-decoration-none" onClick={handleItemClick}>
-          <ListGroup.Item className="border-0 rounded-5 mt-3 d-flex align-items-center">
+          <ListGroup.Item className={`border-0 rounded-5 mt-3 d-flex align-items-center ${location.pathname === '/logout' ? 'active' : ''}`}>
             <img src={log} className="mx-2" alt="Logout" /> Logout
           </ListGroup.Item>
         </Link>
