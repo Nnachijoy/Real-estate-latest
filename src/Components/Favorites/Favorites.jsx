@@ -81,65 +81,9 @@ const listingsContainerOne = [
   }
 ];
 
-const unapprovedListings = [
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: firstlistingimage,
-  },
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: secondcardlisting,
-  },
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: thirdcardlisting,
-  },
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: firstlistingimage,
-  },
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: secondcardlisting,
-  },
-  {
-    price: '$148,000',
-    address: 'Block 45, Rockvale manors, Apo, Abuja',
-    bed: '30 Beds',
-    room: '2 Rooms',
-    bath: '2 Baths',
-    sqft: '120sqft',
-    image: thirdcardlisting,
-  }
-  // Add more listings as needed
-];
 
-const MyListing = () => {
+
+const Favorites = () => {
   const [showIcon, setShowIcon] = useState(true);
   const [currentView, setCurrentView] = useState('Approved');
 
@@ -190,43 +134,15 @@ const MyListing = () => {
         </Container>
       </div>
 
+      <div className="container">
+      <div className="d-flex flex-column align-items-end mt-4">
+  <Form inline className="mt-2 w-25 mx-4 search search-form search-form-mobile d-flex align-items-center">
+    <FormControl type="text" placeholder="Search" className="search-input" />
+    <Image src={searchlight} className="ml-2" />
+  </Form>
+</div>
+      </div>
 
-      <Container>
-        <Row>
-          <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
-            <div className="m-2">
-              <div className='approved-unapproved-container mx-2'>
-                <h6
-                  className={`approved ${currentView === 'Approved' ? 'active' : ''}`}
-                  onClick={() => setCurrentView('Approved')}
-                  style={{
-                    color: currentView === 'Approved' ? 'black' : 'black',
-                    backgroundColor: currentView === 'Approved' ? '#FFFFFF' : 'transparent'
-                  }}
-                >
-                  Approved
-                </h6>
-                <h6
-                  className={`unapproved ${currentView === 'Unapproved' ? 'active' : ''}`}
-                  onClick={() => setCurrentView('Unapproved')}
-                  style={{
-                    color: currentView === 'Unapproved' ? 'black' : 'black',
-                    backgroundColor: currentView === 'Unapproved' ? '#FFFFFF' : 'transparent'
-                  }}
-                >
-                  Unapproved
-                </h6>
-              </div>
-            </div>
-          </Col>
-          <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
-            <Form inline className="mt-2 search search-form search-form-mobile d-flex align-items-center">
-              <FormControl type="text" placeholder="Search" className="search-input" />
-              <Image src={searchlight} className="ml-2" />
-            </Form>
-          </Col>
-        </Row>
-      </Container>
 
       <div className="container me-4">
         <h3 className='my-listing mx-3 mt-3'>Favorites</h3>
@@ -241,6 +157,7 @@ const MyListing = () => {
               aria-label="Search"
               onFocus={handleFocus}
               onBlur={handleBlur}
+              
             />
           </div>
 
@@ -316,9 +233,13 @@ const MyListing = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
+             {/* Apply Filter Button */}
+             <Button className="border-0 p-3 rounded-5" style={{background:"#FF7B29"}}>Apply Filter</Button>
             </div>
           </div>
         </div>
+
+     
 
         <Container>
           <Row>
@@ -361,4 +282,4 @@ const MyListing = () => {
   );
 };
 
-export default MyListing;
+export default Favorites;

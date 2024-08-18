@@ -313,6 +313,8 @@ const Listing = () => {
         </Dropdown.Menu>
       </Dropdown>
     </div>
+     {/* Apply Filter Button */}
+     <Button className="border-0 p-3 rounded-5" style={{background:"#FF7B29"}}>Apply Filter</Button>
   </div>
 </div>
 
