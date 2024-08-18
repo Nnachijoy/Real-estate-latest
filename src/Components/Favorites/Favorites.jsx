@@ -136,12 +136,12 @@ const Favorites = () => {
 
       <div className="container">
       <div className="d-flex flex-column align-items-end mt-4">
-  <Form inline className="mt-2 w-25 mx-4 search search-form search-form-mobile d-flex align-items-center">
+  <Form inline className="mt-2 mx-4 search search-form search-form-mobile d-flex align-items-center" style={{maxWidth:"400px"}}>
     <FormControl type="text" placeholder="Search" className="search-input" />
     <Image src={searchlight} className="ml-2" />
   </Form>
-</div>
       </div>
+</div>
 
 
       <div className="container me-4">
