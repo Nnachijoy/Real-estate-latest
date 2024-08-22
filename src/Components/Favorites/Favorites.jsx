@@ -141,7 +141,7 @@ const Favorites = () => {
     <Image src={searchlight} className="ml-2" />
   </Form>
       </div>
-</div>
+     </div>
 
 
       <div className="container me-4">
