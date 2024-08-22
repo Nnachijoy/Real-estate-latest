@@ -34,8 +34,8 @@ const profiles = [
     ratings: 4.5,
     reviews: 12,
     housesSold: 150,
-    experience: 'Rentals',
-    buttons: ['Selling a house', 'Buying a House']
+    experience: null,
+    buttons: ['Rentals', 'Selling a house', "Buying a house"]
   },
   {
     id: 3,
@@ -43,11 +43,13 @@ const profiles = [
     name: 'Abdul Suleiman',
     location: 'Apo Duste, Abuja',
     ratings: 4.5,
-    reviews: 0,
+    reviews: 12,
     housesSold: 150,
-    experience: '8 Years experience',
-    buttons: ['Selling a house', 'Buying a House']
+    experience: null,
+    buttons: ['Rentals', 'Selling a house', "Buying a house"]
   }
+  
+ 
 ];
 
 const SavedProfile = () => {
@@ -113,7 +115,7 @@ const SavedProfile = () => {
                     </div>
                     <div className='m-0 p-0'>{profile.housesSold} Houses sold in total</div>
                     {profile.experience && <button className='profile-buttons mt-2'>{profile.experience}</button>}
-                    <div className="button-container mt-1">
+                    <div className="button-container mt-2">
                       {profile.buttons.map((buttonText, index) => (
                         <button key={index} className='profile-buttons'>{buttonText}</button>
                       ))}
