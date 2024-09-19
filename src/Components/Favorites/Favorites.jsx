@@ -23,6 +23,7 @@ import searchlight from '../../assets/searchlight.png';
 import "./Favorites.css"; 
 import Animation from '../Animation';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const listingsContainerOne = [
   {
@@ -160,6 +161,8 @@ const Favorites = () => {
               
             />
           </div>
+
+          <CustomNavbar />
 
           {/* dropdowns */}
           <div className="dropdowns-wrapper">

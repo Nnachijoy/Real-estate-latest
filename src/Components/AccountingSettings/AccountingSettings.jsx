@@ -11,6 +11,7 @@ import Form from 'react-bootstrap/Form';
 import Animation from '../Animation';
 import secondcardlisting from '../../assets/secondcardlisting.png';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const MyListing = () => {
   const [radioValue, setRadioValue] = useState('1');
@@ -98,10 +99,11 @@ const MyListing = () => {
           </Col>
         </Row>
       </Container>
+
+            <CustomNavbar />
+
     <div className="mt-5">
       <div className="">
-        
-
         <Container className="mt-3">
           <Row>
             <Col md={12}>

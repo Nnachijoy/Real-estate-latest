@@ -14,7 +14,8 @@ import SalesChart from './SalesChart';
 import "./dash.css";
 import Animation from '../Animation';
 import InspectionTable from './InspectionTable';
-import Head from '../Head'; 
+import Head from '../Head';
+import CustomNavbar from '../CustomNavbar/CustomNavbar'; 
 
 
 
@@ -106,7 +107,9 @@ export const Dashb = () => {
         </Row>
       </Container>
       </Animation>
-
+        <div>
+          <CustomNavbar />
+        </div>
       <Container className="my-4">
         <Row>
           <Col xs={12} lg={8}>

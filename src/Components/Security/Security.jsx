@@ -8,6 +8,7 @@ import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import 'animate.css/animate.min.css';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const Security = () => {
   return (
@@ -50,6 +51,8 @@ const Security = () => {
           </Col>
         </Row>
       </Container>
+
+      <CustomNavbar />
 
       {/* Form Elements */}
       <Form className='mt-5'>

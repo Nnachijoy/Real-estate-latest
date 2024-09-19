@@ -13,6 +13,7 @@ import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
 import Animation from '../Animation';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const profiles = [
   {
@@ -91,6 +92,8 @@ const SavedProfile = () => {
           </Row>
         </Animation>
       </Container>
+
+      <CustomNavbar />
 
       <div className='mt-3'>
         <Animation animationClass="animate__slideInLeft" delay={200}>

@@ -245,6 +245,7 @@ import Animation from '../Animation';
 import InspectionTable from './InspectionTable';
 import RecentInspectionTable from './RecentInspectionTable';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const inspectionSummary = [
   { title: "Successful Inspection", count: 321, image: freshtop },
@@ -281,9 +282,14 @@ export const Dashb = () => {
                 <Col>
                   <h1 style={{width:"0px", fontSize:"400%", height:"0px"}}>01</h1> 
                 </Col>
-                <Col className="mt-3">
+                <Col className="mt-3 ms-4 d-block d-md-none"> 
                   <p className="">JANUARY <span className="me-4">2021</span></p>
                 </Col>
+
+                <Col className="mt-3 d-none d-md-block"> 
+                  <p className="">JANUARY <span className="me-4">2021</span></p>
+                </Col>
+
               </Row>
             </div>
           </Col>
@@ -295,6 +301,8 @@ export const Dashb = () => {
           </Col>
         </Row>
       </Container>
+
+      <CustomNavbar />
 
       <Container className="my-4">
         <Animation animationClass="animate__slideInRight" delay={100}>

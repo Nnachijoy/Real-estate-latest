@@ -23,6 +23,7 @@ import searchlight from '../../assets/searchlight.png';
 import "./MyListing.css"; 
 import Animation from '../Animation';
 import Head from '../Head'; 
+import CustomNavbar from '../CustomNavbar/CustomNavbar';
 
 const listingsContainerOne = [
   {
@@ -240,6 +241,8 @@ const Listing = () => {
               onBlur={handleBlur}
             />
           </div>
+
+          <CustomNavbar />
 
           {/* dropdowns */}
          <div className="dropdowns-wrapper">
