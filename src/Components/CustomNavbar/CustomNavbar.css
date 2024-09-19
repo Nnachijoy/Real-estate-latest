@@ -36,7 +36,7 @@
   margin-right: 5px; /* Space between icon and text */
 }
 
-/* Styling for inactive buttons */
+
 .inactive-link {
   color: #f4a261;
   background-color: white; /* White background for inactive buttons */
@@ -48,7 +48,7 @@
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
-/* Styling for active buttons */
+
 .active-link {
   color: white;
   background-color: #f4a261; /* Same background color for active buttons */
@@ -58,7 +58,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Max width and height for buttons */
+
 .btn {
   max-width: 130px; /* Adjust as needed */
   max-height: 60px; /* Adjust as needed */
@@ -66,7 +66,6 @@
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
-/* Hover effect for inactive buttons */
 .inactive-link:hover {
   background-color: #f4a261; /* Hover background color */
   color: white; /* Hover text color */

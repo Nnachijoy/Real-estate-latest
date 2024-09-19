@@ -245,77 +245,77 @@ const Listing = () => {
           <CustomNavbar />
 
           {/* dropdowns */}
-         <div className="dropdowns-wrapper">
-  <div className='dropdown-container px-3'>
-    <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
-      <Dropdown onSelect={(e) => handleSelect('forSale', e)}>
-        <Dropdown.Toggle variant="white" id="dropdown-basic" className="custom-dropdown-toggle">
-          {selectedAction.forSale}
-          <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
+          <div className="dropdowns-wrapper">
+            <div className='dropdown-container px-3'>
+              <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
+                <Dropdown onSelect={(e) => handleSelect('forSale', e)}>
+                  <Dropdown.Toggle variant="white" id="dropdown-basic">
+                    {selectedAction.forSale}
+                    <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item  eventKey="Action">Action</Dropdown.Item>
+                    <Dropdown.Item  eventKey="Another action">Another action</Dropdown.Item>
+                    <Dropdown.Item  eventKey="Something else">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
 
-    <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
-      <Dropdown onSelect={(e) => handleSelect('price', e)}>
-        <Dropdown.Toggle variant="white" id="dropdown-basic" className="custom-dropdown-toggle">
-          {selectedAction.price}
-          <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
+              <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
+                <Dropdown onSelect={(e) => handleSelect('price', e)}>
+                  <Dropdown.Toggle variant="white" id="dropdown-basic">
+                    {selectedAction.price}
+                    <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
 
-    <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
-      <Dropdown onSelect={(e) => handleSelect('bedsBath', e)}>
-        <Dropdown.Toggle variant="white" id="dropdown-basic" className="custom-dropdown-toggle">
-          {selectedAction.bedsBath}
-          <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
+              <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
+                <Dropdown onSelect={(e) => handleSelect('bedsBath', e)}>
+                  <Dropdown.Toggle variant="white" id="dropdown-basic">
+                    {selectedAction.bedsBath}
+                    <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
 
-    <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
-      <Dropdown onSelect={(e) => handleSelect('homeType', e)}>
-        <Dropdown.Toggle variant="white" id="dropdown-basic" className="custom-dropdown-toggle">
-          {selectedAction.homeType}
-          <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
+              <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
+                <Dropdown onSelect={(e) => handleSelect('homeType', e)}>
+                  <Dropdown.Toggle variant="white" id="dropdown-basic">
+                    {selectedAction.homeType}
+                    <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
 
-    <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
-      <Dropdown onSelect={(e) => handleSelect('more', e)}>
-        <Dropdown.Toggle variant="white" id="dropdown-basic" className="custom-dropdown-toggle">
-          {selectedAction.more}
-          <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
+              <div className='dropdown-item-wrapper bg-white p-1 rounded-4'>
+                <Dropdown onSelect={(e) => handleSelect('more', e)}>
+                  <Dropdown.Toggle variant="white" id="dropdown-basic">
+                    {selectedAction.more}
+                    <img src={dropdown} alt="dropdown" style={{ marginLeft: '8px' }} />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item eventKey="Action">Action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Another action">Another action</Dropdown.Item>
+                    <Dropdown.Item eventKey="Something else">Something else</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
      {/* Apply Filter Button */}
      <Button className="border-0 p-3 rounded-5" style={{background:"#FF7B29"}}>Apply Filter</Button>
   </div>
