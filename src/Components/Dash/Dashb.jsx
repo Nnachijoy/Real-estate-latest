@@ -95,7 +95,7 @@ export const Dashb = () => {
           <Col xs={12} md={6} className="bg-light p-3 d-flex justify-content-between align-items-center">
             <div className="mt-3">
               <p>Hi, Andrei,</p>
-              <h1>Welcome to RealHomes!</h1>
+              <h1 className="welcome">Welcome to RealHomes!</h1>
             </div>
           </Col>
           <Col xs={12} md={6} className="d-flex flex-column align-items-end mt-4">
@@ -113,10 +113,11 @@ export const Dashb = () => {
       <Container className="my-4">
         <Row>
           <Col xs={12} lg={8}>
-            <h3>Today's Data</h3>
+            <h3 className="today-data">Today's Data</h3>
+            <p className="sales text-muted" style={{fontSize:"13px"}}>Sales Summary</p>
             <Animation animationClass="animate__slideInRight" delay={200}>
             
-              <Row>
+              {/* <Row>
     {cardData.map((card, index) => (
       <Col xs={12} sm={6} md={3} className="mb-4" key={index}>
         <Card className="border-0 rounded-4">
@@ -131,7 +132,28 @@ export const Dashb = () => {
         </Card>
       </Col>
     ))}
-  </Row>
+  </Row> */}
+
+
+<Row>
+  {cardData.map((card, index) => (
+    <Col xs={6} sm={6} md={3} className="mb-4" key={index}>
+      <Card className="border-0 rounded-4 card-mobile">
+        <Card.Body className="mt-2 card-body-mobile">
+          <Image src={card.imgSrc} className="icon-mobile" />
+          <h4 className="mt-2">{card.amount}</h4>
+          <p>{card.description}</p>
+          <p className="fs-6" style={{ color: card.color }}>
+            {card.percentage}
+          </p>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+</Row>
+
+
+
               </Animation>
             <InspectionTable />
           </Col>

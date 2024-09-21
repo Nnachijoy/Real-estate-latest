@@ -44,14 +44,14 @@
   font-weight: bold;
   border-radius: 50px;
   padding: 10px 20px; /* Ensure padding similar to active buttons */
-  border: 2px solid #f4a261; /* Border to match the theme */
+   /* Border to match the theme */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 
 .active-link {
   color: white;
-  background-color: #f4a261; /* Same background color for active buttons */
+  background-color: #FF7B29; /* Same background color for active buttons */
   padding: 10px 20px;
   border-radius: 50px;
   border: 2px solid #f4a261; /* Border to match the theme */
@@ -60,7 +60,7 @@
 
 
 .btn {
-  max-width: 130px; /* Adjust as needed */
+  max-width: 135px; /* Adjust as needed */
   max-height: 60px; /* Adjust as needed */
   overflow: hidden; /* Prevent content from overflowing */
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
@@ -102,8 +102,8 @@
 
   /* Smaller icon size and adjustments */
   .icon {
-    max-width: 15px; /* Adjust icon size for smaller screens */
-    max-height: 15px;
+    max-width: 19px; /* Adjust icon size for smaller screens */
+    max-height: 19px;
   }
 
   .nav-item .icon-text span {
@@ -125,4 +125,45 @@
   .nav-col {
     display: none; /* Hide buttons on desktop */
   }
+}
+
+
+/* Increase size and shadow for the active button */
+.active-link {
+  color: white;
+  background-color:#FF7B29; /* Same background color for active buttons */
+  padding: 12px 24px; /* Increase padding for emphasis */
+  border-radius: 50px;
+  border: 2px solid #f4a261; /* Border to match the theme */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transform: scale(1.05); /* Slightly enlarge active button */
+  z-index: 1; /* Bring the active button forward */
+}
+
+/* Subtle hover effect */
+.inactive-link:hover {
+  background-color: #f4a261; /* Hover background color */
+  color: white; /* Hover text color */
+}
+
+/* Add an animation to focus on active button */
+.active-link {
+  animation: focusAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes focusAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Active icon color changes */
+.active .icon-text span,
+.active-link .icon {
+  color: white;
+  filter: brightness(0) invert(1); /* Makes icon white */
 }

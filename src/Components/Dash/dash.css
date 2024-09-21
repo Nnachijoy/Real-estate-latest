@@ -44,7 +44,20 @@
     
   }
 
- 
+  .today-data{
+    font-size: 20;
+    font-weight: 600;
+  }
+
+ .welcome{
+  font-size: 10;
+  font-weight: 700;
+ }
+
+ .sales{
+  font-size: 10px;
+  font-weight: 500;
+ }
   
   .ml-2 {
     margin-left: 10px;
@@ -80,6 +93,33 @@
 
 .custom-table thead th {
   border-bottom: 2px solid #dee2e6; /* You can customize the border color and thickness */
+}
+
+
+@media (max-width: 768px) {
+  .card-mobile {
+    height: 150px;
+    padding: 10px;
+ 
+  }
+
+  .card-body-mobile {
+    height: 180px;
+   
+  }
+
+  .icon-mobile {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-mobile h4 {
+    font-size: 27px;
+  }
+
+  .card-mobile p {
+    font-size: 12px;
+  }
 }
 
 

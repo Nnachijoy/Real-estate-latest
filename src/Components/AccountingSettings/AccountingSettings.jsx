@@ -25,23 +25,7 @@ const MyListing = () => {
   return (
     <div style={{marginTop:"-1px", marginBottom:"180px"}}> 
     <Animation animationClass="animate__slideInRight" delay={200}>
-     {/* <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
-  <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
-    <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
-   
-  </Container>
-</div>
-
-      <div className="container d-none d-md-block">
-        <Container className="p-3" style={{ position: 'relative', marginLeft:"-30px" }}>
-        <div className="container d-none d-md-block">
-      <Head 
-        bellIcon={bell} 
-        profileImage={profile} 
-      />
-      </div>
-        </Container>
-      </div> */}
+     
 
        {/* Mobile Navbar with Profile Image and Bell Icon */}
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
