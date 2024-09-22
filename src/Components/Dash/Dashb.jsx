@@ -58,7 +58,7 @@ export const Dashb = () => {
       
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
   <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
-    <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+    <h3 className="flex-grow-1 mt-1" style={{marginLeft:"70px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
     <div className="d-flex align-items-center">
       <Image
         src={bell}
@@ -117,22 +117,7 @@ export const Dashb = () => {
             <p className="sales text-muted" style={{fontSize:"13px"}}>Sales Summary</p>
             <Animation animationClass="animate__slideInRight" delay={200}>
             
-              {/* <Row>
-    {cardData.map((card, index) => (
-      <Col xs={12} sm={6} md={3} className="mb-4" key={index}>
-        <Card className="border-0 rounded-4">
-          <Card.Body className="mt-2">
-            <Image src={card.imgSrc} className="w-25" />
-            <h4 className="mt-2">{card.amount}</h4>
-            <p>{card.description}</p>
-            <p className="fs-6" style={{ color: card.color }}>
-              {card.percentage}
-            </p>
-          </Card.Body>
-        </Card>
-      </Col>
-    ))}
-  </Row> */}
+            
 
 
 <Row>

@@ -30,7 +30,7 @@ const MyListing = () => {
        {/* Mobile Navbar with Profile Image and Bell Icon */}
       <div className="d-block d-md-none bg-white" style={{ height: "62px", width: "400px", marginLeft: "-30px" }}>
         <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
-          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"60px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
+          <h3 className="flex-grow-1 mt-1" style={{marginLeft:"70px", color:"#FF7B29", fontFamily:"Syne", fontWeight:"700", fontSize:"22px"}}>RealHomes</h3>
           {/* Bell Icon */}
           <Image src={bell} style={{ width: "20px", height: "20px", marginRight: "10px" }} />
           {/* Profile Image */}
