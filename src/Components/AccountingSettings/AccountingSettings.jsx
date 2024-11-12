@@ -194,50 +194,12 @@ const MyListing = () => {
   </Form.Group>
 
 <Row>
-  {/* <Col>
-  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
-    <Form.Control
-      type="number"
-      placeholder="add your state"
-      className="custom-inputs"   style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
-    />
-       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-      <div className="me-2 na">N/A</div>
-      <h1 className='edit mt-2'>Edit</h1>
-    </div>
-    <Form.Label className="custom-placeholder-labels">State</Form.Label>
-  </Form.Group>
-  </Col> */}
+  
 
 
-  {/* <Col>
-  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
-    <Form.Control
-      type="number"
-      placeholder="add your city"
-      className="custom-inputs"   style={{ outline: 'none', boxShadow: 'none', borderColor: 'none' }}
-    />
-       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-      <div className="me-2 na">N/A</div>
-      <h1 className='edit mt-2'>Edit</h1>
-    </div>
-    <Form.Label className="custom-placeholder-labels">City</Form.Label>
-  </Form.Group>
-  </Col> */}
+ 
 </Row>
-{/* 
-  <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
-    <Form.Control
-      type="number"
-      placeholder="kind of services you offer"
-      className="custom-inputs"
-    />
-       <div className="position-absolute  d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '20px' }}>
-      <div className="me-2 na">N/A</div>
-      <h1 className='edit mt-2'>Edit</h1>
-    </div>
-    <Form.Label className="custom-placeholder-labels">Your services</Form.Label>
-  </Form.Group> */}
+
 
 </Form>
 
