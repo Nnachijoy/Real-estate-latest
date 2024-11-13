@@ -1,22 +1,22 @@
-
-
-
+/* Remove borders from table rows, cells, and headers within the tbody */
 .custom-table tbody tr,
 .custom-table tbody td,
 .custom-table tbody th {
-  border: none;
+  border: none; /* Removes any default borders from table body elements */
 }
 
+/* Add a bottom border to header cells in the table */
 .custom-table thead th {
-  border-bottom: 2px solid #dee2e6; /* You can customize the border color and thickness */
+  border-bottom: 2px solid #dee2e6; /* Adds a bottom border to the header, with a light grey color (#dee2e6) and a thickness of 2px */
 }
 
-
+/* Styling for table headers and cells */
 .custom-table th, .custom-table td {
-  min-width: 120px;
-  white-space: nowrap;
+  min-width: 120px; /* Ensures that each cell has a minimum width of 120px */
+  white-space: nowrap; /* Prevents text from wrapping inside the cell */
 }
 
+/* Makes the table horizontally scrollable when the content exceeds available width */
 .table-responsive {
-  overflow-x: auto;
+  overflow-x: auto; /* Enables horizontal scrolling if the table width exceeds the container */
 }

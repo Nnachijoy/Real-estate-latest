@@ -32,7 +32,6 @@
   }
   
 
-  /* Add this to your CSS file */
 @media (max-width: 768px) {
   .search-form-mobile {
     width: 90% !important;

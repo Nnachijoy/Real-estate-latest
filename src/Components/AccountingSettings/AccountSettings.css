@@ -1,90 +1,97 @@
-
+/* Container for buttons with a gap between them */
 .button-container {
-  display: flex;
-  gap: 10px; 
+  display: flex; /* Enables flexbox layout */
+  gap: 10px; /* Adds 10px gap between each button */
 }
 
+/* Styling for the property name text */
 .property-name{
-  color: #5D656E;
-  font-size: 11.38px;
-  font-weight: 400;
-  line-height: 16.39;
+  color: #5D656E; 
+  font-size: 11.38px; 
+  font-weight: 400; 
+  line-height: 16.39px; /* Line height for spacing between lines */
 }
 
+/* Container for image, with a relative position to position child elements */
 .image-container-setting {
-  position: relative;
-  display: inline-block;
-  
+  position: relative; /* Necessary for positioning child elements like the pencil */
+  display: inline-block; /* Ensures the container behaves like an inline element */
 }
 
+/* Styling for rounded images, such as profile pictures */
 .rounded-circle {
-  width: 130px;
+  width: 130px; 
   height: 130px; 
-  border-radius: 50%;
-  object-fit: cover; 
-  border: 0.4px solid #FF7B29;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border: 0.4px solid #FF7B29; /* Adds a border with a color */
 }
 
+/* Pencil icon overlay on the image */
 .pencil {
-  position: absolute;
+  position: absolute; /* Positions it absolutely within the parent container */
   width: 40px;  
-  height: 40px; 
-  bottom: 0;
-  right: 0;
+  height: 40px;  
+  bottom: 0; /* Positions it at the bottom of the container */
+  right: 0; /* Positions it at the right of the container */
 }
 
-
+/* Utility class to add relative positioning (used across multiple elements) */
 .position-relatives {
-  position: relative !important;
+  position: relative !important; /* Forces the element to have relative positioning */
 }
 
+/* Styling for input fields, overriding default padding and borders */
 .custom-inputs {
-  padding-top: 40px !important; 
-  padding-left: 10px !important;
-  border: none !important;
-
+  padding-top: 40px !important; /* Adds padding to the top */
+  padding-left: 10px !important; /* Adds padding to the left */
+  border: none !important; /* Removes the default border */
 }
 
+/* Placeholder text styling for the custom inputs */
 .custom-inputs::placeholder {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 18.09px !important;
-  color: #BFBFBF !important;
+  font-size: 16px !important; /* Sets the placeholder font size */
+  font-weight: 600 !important; /* Makes the placeholder text bold */
+  line-height: 18.09px !important; /* Adjusts line height for better readability */
+  color: #BFBFBF !important; /* Light grey color for placeholder */
 }
 
+/* Label positioning for the custom inputs, which is placed over the input */
 .custom-placeholder-labels {
-  position: absolute !important;
-  top: 0.5rem !important;
-  left: 10px !important;
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  line-height: 26px !important;
-  color: #576779 !important;
-  transition: all 0.2s !important;
-  pointer-events: none !important;
+  position: absolute !important; /* Positions label absolutely within the input */
+  top: 0.5rem !important; /* Positions label slightly below the top */
+  left: 10px !important; /* Positions label slightly from the left edge */
+  font-size: 20px !important; /* Sets a larger font size for the label */
+  font-weight: 600 !important; /* Makes the label bold */
+  line-height: 26px !important; /* Adjusts line height */
+  color: #576779 !important; /* Color for the label */
+  transition: all 0.2s !important; /* Smooth transition for label movement */
+  pointer-events: none !important; /* Prevents interactions with the label */
 }
 
+/* On focus or when input has a value, adjusts label style and position */
 .custom-inputs:focus + .custom-placeholder-labels,
 .custom-inputs:not(:placeholder-shown) + .custom-placeholder-labels {
-  top: -0.75rem !important;
-  left: 10px !important;
-  font-size: 0.75rem !important;
-  color: #495057 !important;
-  background-color: white !important;
-  padding: 0 0.25rem !important;
+  top: -0.75rem !important; /* Moves label above the input */
+  left: 10px !important; /* Keeps the left alignment */
+  font-size: 0.75rem !important; /* Reduces label font size */
+  color: #495057 !important; /* Changes label color */
+  background-color: white !important; /* Ensures label has a white background */
+  padding: 0 0.25rem !important; /* Adds some padding for a neat effect */
 }
 
-
+/* Styling for N/A text */
 .na {
-  color: #16314E;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23.87px;
+  color: #16314E; 
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 23.87px; /* Line height for spacing */
 }
 
+/* Styling for the edit button */
 .edit {
-  color: #FF7B29;
-  font-size: 16px;
+  color: #FF7B29; 
+  font-size: 16px; 
   font-weight: 600;
-  line-height: 26px;
+  line-height: 26px; 
 }
